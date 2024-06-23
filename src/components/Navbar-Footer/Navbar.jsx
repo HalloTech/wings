@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
+import { BsInstagram, BsFacebook } from "react-icons/bs";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -10,6 +11,20 @@ const navigation = [
   { name: "Oversized", href: "/oversized" },
   { name: "Round Neck TShirts", href: "/rounded-Tshirts" },
   { name: "Contact-Us", href: "#" },
+];
+
+const socialMedias = [
+  {
+    name: "Instagram",
+    link: "https://www.instagram.com/wingsclothing0?igsh=ZnRuMGZrZ2xmajVs",
+    icon: <BsInstagram />,
+  },
+
+  {
+    name: "Facebook",
+    link: "https://www.facebook.com/profile.php?id=100083149247935&mibextid=ZbWKwL",
+    icon: <BsFacebook />,
+  },
 ];
 
 const Navbar = ({ footerRef }) => {
@@ -26,9 +41,25 @@ const Navbar = ({ footerRef }) => {
     <>
       {/* desktop navbar */}
       <nav className="flex items-center justify-between bg-yellow-300 py-4">
-        <div></div>
+        <ul className="md:hidden w-full flex items-center justify-center gap-8">
+          {socialMedias.map((item, index) => (
+            <Link
+              key={index}
+              to={item.link}
+              className="transition-all ease-in-out hover:scale-150 duration-500 "
+            >
+              <span
+                className={`text-4xl cursor-pointer ${
+                  item.name === "Instagram" && "text-red-500/90"
+                } ${item.name === "Facebook" && "text-cyan-900/90"}`}
+              >
+                {item.icon}
+              </span>
+            </Link>
+          ))}
+        </ul>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="w-full hidden md:flex items-center justify-center gap-4">
           {navigation.map((items, index) => (
             <Link
               key={index}
