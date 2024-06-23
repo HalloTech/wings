@@ -19,7 +19,7 @@ const footerHeading = [
     locationIcon: <IoLocationOutline />,
     product1: "Al Madina Market, Shivgarh Bazar, Soraon, Prayagraj-212502",
     phoneIcon: <MdOutlinePhone />,
-    product2: "+91 7838568806",
+    product2: "+91 6386897632",
     mailIcon: <MdOutlineMarkEmailUnread />,
     product3: "wingsclothing0@gmail.com",
   },

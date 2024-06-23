@@ -59,32 +59,34 @@ const SingleHoodies = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center gap-2 w-full px-4 my-4">
+      <div className="flex flex-col lg:flex-row items-center gap-2 w-full px-4 my-4">
         {/* product right side image scroller code start here */}
-        <div className="snap-x flex flex-row md:flex-col justify-start items-center overflow-y-scroll scroll-smooth snap-mandatory gap-4 my-2 sm:my-12 hide-scrollbar md:h-[33rem] w-full md:w-1/2">
-          {hoodiesSingleData.images.map((item, index) => (
-            <div
-              key={index}
-              className="snap-center flex-shrink-0 relative cursor-pointer w-[75%] sm:w-[65%] md:w-full h-[24rem]"
-            >
-              <img
-                className="w-full h-full rounded-3xl"
-                src={item}
-                alt="{item.alt}"
-                onClick={() => handleClickImage(item)}
-              />
-              {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-3xl flex justify-center items-end pb-4">
+        <div className="snap-x flex flex-row lg:flex-col justify-start items-center overflow-y-scroll scroll-smooth snap-mandatory gap-4 my-2 sm:my-12 hide-scrollbar md:h-[33rem] w-full lg:w-[44rem] xl:w-[27rem]">
+          {hoodiesSingleData.images
+            .slice(0, hoodiesSingleData.images.length - 1)
+            .map((item, index) => (
+              <div
+                key={index}
+                className="snap-center flex-shrink-0 relative cursor-pointer h-[24rem]"
+              >
+                <img
+                  className={`w-full h-full rounded-3xl`}
+                  src={item}
+                  alt="{item.alt}"
+                  onClick={() => handleClickImage(item)}
+                />
+                {/* <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent rounded-b-3xl flex justify-center items-end pb-4">
                 <span className="text-white text-center">
                   {item.productName}
                 </span>
               </div> */}
-            </div>
-          ))}
+              </div>
+            ))}
         </div>
         {/* product right side image scroller code end here */}
 
         {/* product image code start here */}
-        <div className="w-full">
+        <div className="w-full sm:w-[22rem] md:w-[23rem] lg:w-[53rem] xl:w-[37rem]">
           <img
             src={selectImage ? selectImage : hoodiesSingleData.images[0]}
             alt="selected image"
@@ -97,7 +99,7 @@ const SingleHoodies = () => {
 
         <div className="flex flex-col justify-between w-full h-[33rem] rounded-2xl mb-8">
           {/* product heading and price code start here */}
-          <div className="flex flex-col gap-4 px-7 pt-6">
+          <div className="flex flex-col gap-4 sm:px-7 pt-6">
             <h1 className="text-black font-bold text-2xl">
               {hoodiesSingleData.product_head}
             </h1>
@@ -113,7 +115,7 @@ const SingleHoodies = () => {
           {/* product heading and price code end here */}
 
           {/* rating code start here */}
-          <div className="flex flex-col px-7 pt-4">
+          <div className="flex flex-col sm:px-7 pt-4">
             <h1 className="text-black/100 font-bold text-2xl">
               Rate this Product
             </h1>
@@ -140,9 +142,10 @@ const SingleHoodies = () => {
           </div>
           {/* rating code end here */}
 
-          <div className="flex flex-col px-7 pt-4">
-            <span className="flex justify-between items-center">
-              <span className="text-black/100 font-bold text-2xl">
+          {/* size content here */}
+          <div className="flex flex-col sm:px-7 pt-4">
+            <span className="flex items-center justify-between sm:justify-normal gap-[125px]">
+              <span className="text-black/100 font-bold text-base sm:text-2xl">
                 Size : {selectedSize}
               </span>
 
@@ -167,7 +170,7 @@ const SingleHoodies = () => {
           </div>
 
           {/* button code start here */}
-          <div className="flex flex-col sm:flex-row gap-2 w-full px-7 py-4">
+          <div className="flex flex-col sm:flex-row gap-2 w-full sm:px-7 py-4">
             <button
               className="hover:scale-110 bg-green-800 hover:bg-green-600 text-white font-bold text-lg p-2 rounded-lg w-full"
               onClick={() => handleAddtoCart(hoodiesSingleData)}

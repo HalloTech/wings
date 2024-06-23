@@ -45,12 +45,12 @@ const CarouselSection = () => {
       <div className="flex flex-col items-center justify-center w-full">
         <div className="relative w-full mb-8">
           {/* Carousel wrapper */}
-          <div className="relative w-full h-[35rem] overflow-hidden rounded-lg">
+          <div className="relative w-full h-[12rem] sm:h-[33rem] overflow-hidden rounded-lg">
             {/* Carousel items */}
             {carouselItems.map((item, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
+                className={`w-full absolute inset-0 transition-opacity duration-700 ease-in-out ${
                   index === currentIndex ? "opacity-100" : "opacity-0"
                 }`}
                 style={{
@@ -59,15 +59,9 @@ const CarouselSection = () => {
               >
                 <img
                   src={item.url}
-                  className="block w-full h-full object-cover"
+                  className="block w-full h-full lg:object-cover"
                   alt={item.alt}
                 />
-
-                {/* <img
-                  src={item.url}
-                  className="block w-1/2 h-full object-"
-                  alt={item.alt}
-                /> */}
               </div>
             ))}
           </div>
