@@ -9,7 +9,7 @@ const navigation = [
   { name: "Zippers", href: "/zippers" },
   { name: "Oversized", href: "/oversized" },
   { name: "Round Neck TShirts", href: "/rounded-Tshirts" },
-  { name: "Contact-Us", href: "#" },
+  // { name: "Contact-Us", href: "#" },
 ];
 
 const SideNavbar = ({ toggleSideNav }) => {

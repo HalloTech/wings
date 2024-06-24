@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
 import { BsInstagram, BsFacebook } from "react-icons/bs";
+import { IoHomeOutline } from "react-icons/io5";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -14,6 +15,12 @@ const navigation = [
 ];
 
 const socialMedias = [
+  {
+    name: "Home",
+    link: "/",
+    icon: <IoHomeOutline />,
+  },
+
   {
     name: "Instagram",
     link: "https://www.instagram.com/wingsclothing0?igsh=ZnRuMGZrZ2xmajVs",
@@ -49,9 +56,11 @@ const Navbar = ({ footerRef }) => {
               className="transition-all ease-in-out hover:scale-150 duration-500 "
             >
               <span
-                className={`text-4xl cursor-pointer ${
-                  item.name === "Instagram" && "text-red-500/90"
-                } ${item.name === "Facebook" && "text-cyan-900/90"}`}
+                className={`text-3xl cursor-pointer ${
+                  item.name === "Home" && "text-black"
+                } ${item.name === "Instagram" && "text-red-500/90"} ${
+                  item.name === "Facebook" && "text-cyan-900/90"
+                }`}
               >
                 {item.icon}
               </span>
