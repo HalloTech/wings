@@ -134,7 +134,7 @@ const Footer = React.forwardRef((props, ref) => {
           <p className="text-base text-gray-500/90">
             Design And Manage By{" "}
             <Link to={"https://www.hallotech.in"} className="text-green-500">
-              HelloTech Solutions
+              HalloTech Solutions
             </Link>
           </p>
         </div>

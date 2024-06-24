@@ -1,21 +1,26 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const carouselItems = [
   {
     url: "/assets/wings-orginal/wings-orginal-1.png",
     alt: "wings-orginal-1",
+    href: "/polo",
   },
   {
     url: "/assets/wings-orginal/wings-orginal-2.png",
     alt: "wings-orginal-2",
+    href: "/polo",
   },
   {
     url: "/assets/wings-orginal/wings-orginal-3.png",
     alt: "wings-orginal-3",
+    href: "/polo",
   },
   {
     url: "/assets/wings-orginal/wings-orginal-4.png",
     alt: "wings-orginal-4",
+    href: "/oversized",
   },
 ];
 
@@ -56,17 +61,21 @@ const WingsOrginal = () => {
           }`}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 h-full">
-            <img
-              src={carouselItems[i].url}
-              className="block w-full h-full object-cover"
-              alt={carouselItems[i].alt}
-            />
-            {carouselItems[i + 1] && (
+            <Link to={carouselItems[i].href}>
               <img
-                src={carouselItems[i + 1].url}
-                className="block w-full h-full object-cover"
-                alt={carouselItems[i + 1].alt}
+                src={carouselItems[i].url}
+                className="block w-full h-full object-cover cursor-pointer"
+                alt={carouselItems[i].alt}
               />
+            </Link>
+            {carouselItems[i + 1] && (
+              <Link to={carouselItems[i + 1].href}>
+                <img
+                  src={carouselItems[i + 1].url}
+                  className="block w-full h-full object-cover cursor-pointer"
+                  alt={carouselItems[i + 1].alt}
+                />
+              </Link>
             )}
           </div>
         </div>

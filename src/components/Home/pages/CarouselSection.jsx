@@ -1,20 +1,24 @@
 import { useState } from "react";
 import InifiteScroller from "./InifiteScroller";
+import { Link } from "react-router-dom";
 
 const CarouselSection = () => {
   const carouselItems = [
     {
       url: "/assets/page-1/WINGS-Home-image-1.png",
       alt: "wings-home-1",
+      href: "/polo",
     },
     {
       url: "/assets/page-1/WINGS-Home-image-2.png",
       alt: "wings-home-2",
+      href: "/zippers",
     },
 
     {
       url: "/assets/page-1/WINGS-Home-image-4.png",
       alt: "wings-home-4",
+      href: "/oversized",
     },
   ];
 
@@ -57,11 +61,13 @@ const CarouselSection = () => {
                   visibility: index === currentIndex ? "visible" : "hidden",
                 }}
               >
-                <img
-                  src={item.url}
-                  className="block w-full h-full lg:object-cover"
-                  alt={item.alt}
-                />
+                <Link to={item.href}>
+                  <img
+                    src={item.url}
+                    className="block w-full h-full lg:object-cover cursor-pointer"
+                    alt={item.alt}
+                  />
+                </Link>
               </div>
             ))}
           </div>

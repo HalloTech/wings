@@ -1,53 +1,61 @@
 import { useEffect, useState } from "react";
 import "./infiniteScroll.css";
 import { FaAngleLeft, FaChevronRight } from "react-icons/fa";
-
-// const initialImages = [
-//   {
-//     id: 1,
-//     imageurl: "/assets/page-1/product-1-1.jpeg",
-//     altText: "DSC_6963.JPG",
-//     productName: "Hoodies",
-//     herf: "/hoodies",
-//   },
-//   {
-//     id: 2,
-//     imageurl: "/assets/page-1/product-9-2.jpeg",
-//     altText: "DSC_6963.JPG",
-//     productName: "Zipper",
-//     herf: "/zippers",
-//   },
-//   {
-//     id: 3,
-//     imageurl: "/assets/page-1/product-6-2.jpeg",
-//     altText: "DSC_6963.JPG",
-//     productName: "Round Neck Tees",
-//     herf: "/rounded-Tshirts",
-//   },
-//   {
-//     id: 4,
-//     imageurl: "/assets/page-1/product-3-1.jpeg",
-//     altText: "DSC_6963.JPG",
-//     productName: "White Polo Tees",
-//     herf: "/polo",
-//   },
-//   {
-//     id: 5,
-//     imageurl: "/assets/page-1/product-4-1.jpeg",
-//     altText: "DSC_6963.JPG",
-//     productName: "Round Neck Tees",
-//     herf: "/rounded-Tshirts",
-//   },
-// ];
+import { Link } from "react-router-dom";
 
 const images = [
-  "/assets/wings-orginal/wings-category-1.png",
-  "/assets/wings-orginal/wings-category-2.png",
-  "/assets/wings-orginal/wings-category-3.png",
-  "/assets/wings-orginal/wings-category-4.png",
-  "/assets/wings-orginal/wings-category-5.png",
-  "/assets/wings-orginal/wings-category-6.png",
+  {
+    id: 1,
+    imageurl: "/assets/wings-orginal/wings-category-1.png",
+    altText: "DSC_6963.JPG",
+    productName: "Oversized",
+    herf: "/oversized",
+  },
+  {
+    id: 2,
+    imageurl: "/assets/wings-orginal/wings-category-2.png",
+    altText: "DSC_6963.JPG",
+    productName: "Zipper",
+    herf: "/zippers",
+  },
+  {
+    id: 3,
+    imageurl: "/assets/wings-orginal/wings-category-3.png",
+    altText: "DSC_6963.JPG",
+    productName: "Round Neck Tees",
+    herf: "/hoodies",
+  },
+  {
+    id: 4,
+    imageurl: "/assets/wings-orginal/wings-category-4.png",
+    altText: "DSC_6963.JPG",
+    productName: "White Polo Tees",
+    herf: "/hoodies",
+  },
+  {
+    id: 5,
+    imageurl: "/assets/wings-orginal/wings-category-5.png",
+    altText: "DSC_6963.JPG",
+    productName: "Round Neck Tees",
+    herf: "/rounded-Tshirts",
+  },
+  {
+    id: 6,
+    imageurl: "/assets/wings-orginal/wings-category-6.png",
+    altText: "DSC_6963.JPG",
+    productName: "Round Neck Tees",
+    herf: "/polo",
+  },
 ];
+
+// const images = [
+//   "/assets/wings-orginal/wings-category-1.png",
+//   "/assets/wings-orginal/wings-category-2.png",
+//   "/assets/wings-orginal/wings-category-3.png",
+//   "/assets/wings-orginal/wings-category-4.png",
+//   "/assets/wings-orginal/wings-category-5.png",
+//   "/assets/wings-orginal/wings-category-6.png",
+// ];
 
 const InfiniteScroller = () => {
   // const scrollerRef = useRef(null);
@@ -146,14 +154,19 @@ const InfiniteScroller = () => {
               }%)`,
             }}
           >
-            {images.map((src, index) => (
-              <img
+            {images.map((item, index) => (
+              <Link
                 key={index}
-                src={src}
-                alt={`Carousel ${index}`}
-                className="w-full h-full object-cover flex-shrink-0"
+                to={item.herf}
+                className="w-full h-full flex-shrink-0"
                 style={{ width: `${100 / visibleImages}%` }}
-              />
+              >
+                <img
+                  src={item.imageurl}
+                  alt={`Carousel ${index}`}
+                  className="w-full h-full object-cover cursor-pointer"
+                />
+              </Link>
             ))}
           </div>
         </div>
