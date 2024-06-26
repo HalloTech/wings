@@ -25,11 +25,12 @@ const TopHeading = () => {
             />
           </Link>
 
-          <div className="md:hidden flex pr-4">
+          <div className="md:hidden flex flex-col justify-center items-center pr-4">
             <VscThreeBars
               className="text-4xl text-black cursor-pointer"
               onClick={toggleSideNav}
             />
+            <h2>Explore More</h2>
           </div>
         </div>
 
