@@ -28,7 +28,7 @@ const Hoodies = () => {
           // sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
           <div
             key={index}
-            className="flex flex-col w-full min-[399px]:w-[70%] sm:w-full m-auto cursor-pointer"
+            className="bg-grey rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 p-4 h-[490px] flex flex-col"
             onClick={() => handleUserClick(itmes)}
           >
             {/* <div className="h-[12rem]"> */}
@@ -43,7 +43,7 @@ const Hoodies = () => {
               <h1 className="text-black font-semibold">{itmes.product_head}</h1>
               <p className="text-gray-600/80 font-semibold">
                 {/* {itmes.product_para} */}
-                {truncateText(itmes.product_para, 4)}
+                {truncateText(itmes.product_para, 6)}
               </p>
 
               <span className="text-green-600 font-semibold">

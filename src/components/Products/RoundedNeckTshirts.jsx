@@ -31,7 +31,7 @@ const RoundedNeckTshirts = () => {
           // sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
           <div
             key={index}
-            className="flex flex-col w-full min-[399px]:w-[70%] sm:w-full m-auto cursor-pointer"
+            className="bg-grey rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 p-4 h-[550px] flex flex-col"
             onClick={() => handleUserClick(itmes)}
           >
             {/* <div className="h-[12rem]"> */}
@@ -42,20 +42,18 @@ const RoundedNeckTshirts = () => {
             />
             {/* </div> */}
 
-            <div className="flex flex-col px-2">
-              <h1 className="text-black font-semibold">{itmes.product_head}</h1>
-              <p className="text-gray-600/80 font-semibold">
-                {/* {itmes.product_para} */}
-                {truncateText(itmes.product_para, 4)}
-              </p>
-
-              <span className="text-green-600 font-semibold">
-                {itmes.product_new_price} /-{" "}
-                <span className="text-red-600 text line-through">
-                  {itmes.product_old_price}/-
-                </span>
-              </span>
-            </div>
+            <div className="flex flex-col justify-center px-2 flex-grow">
+  <h1 className="text-black font-semibold">{itmes.product_head}</h1>
+  <p className="text-gray-600/80 font-semibold">
+    {truncateText(itmes.product_para, 3)}
+  </p>
+  <span className="text-green-600 font-semibold">
+    {itmes.product_new_price} /-{" "}
+    <span className="text-red-600 text line-through">
+      {itmes.product_old_price}/-
+    </span>
+  </span>
+</div>
           </div>
         ))}
       </div>

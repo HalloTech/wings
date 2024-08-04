@@ -29,7 +29,7 @@ const OverSizeTShirt = () => {
           // sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5
           <div
             key={index}
-            className="flex flex-col w-full min-[399px]:w-[70%] sm:w-full m-auto cursor-pointer"
+            className="bg-grey rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition-shadow duration-300 p-4 h-[500px] flex flex-col"
             onClick={() => handleUserClick(itmes)}
           >
             {/* <div className="h-[12rem]"> */}

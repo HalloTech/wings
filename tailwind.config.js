@@ -10,6 +10,10 @@ export default {
   theme: {
     extend: {
       screens: {},
+      fontFamily: {
+        'poppins': ['Poppins', 'sans-serif'],
+        'playwrite': ['"Playwrite DE Grund"', 'cursive'],
+      },
     },
   },
   plugins: [flowbite],
