@@ -36,13 +36,13 @@ const Zipper = () => {
             <img
               src={itmes.images[0]}
               alt={itmes.alt}
-              className="h-[25rem] transform transition-transform delay-150 duration-150 ease-in-out hover:scale-105"
+              className="h-[400px] transform transition-transform delay-150 duration-150 ease-in-out hover:scale-105"
             />
             {/* </div> */}
 
             <div className="flex flex-col px-2">
               <h1 className="text-md font-semibold text-gray-800 mb-2">{itmes.product_head}</h1>
-              <p className="text-sm text-gray-600 mb-3">
+              <p className="text-gray-600/80 font-semibold">
                 {/* {itmes.product_para} */}
                 {truncateText(itmes.product_para, 4)}
               </p>
