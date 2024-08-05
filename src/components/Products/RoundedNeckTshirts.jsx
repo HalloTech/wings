@@ -43,8 +43,8 @@ const RoundedNeckTshirts = () => {
             {/* </div> */}
 
             <div className="flex flex-col justify-center px-2 flex-grow">
-  <h1 className="text-black font-semibold">{itmes.product_head}</h1>
-  <p className="text-gray-600/80 font-semibold">
+  <h1 className="text-md font-semibold text-gray-800 mb-2">{itmes.product_head}</h1>
+  <p className="text-sm text-gray-600 mb-3">
     {truncateText(itmes.product_para, 3)}
   </p>
   <span className="text-green-600 font-semibold">

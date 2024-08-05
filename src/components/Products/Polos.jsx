@@ -17,7 +17,7 @@ const Polos = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6 bg-gray-200 font-poppins">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 p-6 bg-gray-200 font-Amiri">
       {polos.map((item, index) => (
         <div 
           key={index} 
@@ -31,7 +31,7 @@ const Polos = () => {
           />
           <div className="p-4 flex flex-col justify-between flex-grow">
             <div>
-              <h2 className="text-lg font-semibold text-gray-800 mb-2">{item.product_head}</h2>
+              <h2 className="text-md font-semibold text-gray-800 mb-2">{item.product_head}</h2>
               <p className="text-sm text-gray-600 mb-3">
                 {truncateText(item.product_para, 6)}
               </p>

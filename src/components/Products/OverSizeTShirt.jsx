@@ -41,8 +41,8 @@ const OverSizeTShirt = () => {
             {/* </div> */}
 
             <div className="flex flex-col px-2">
-              <h1 className="text-black font-semibold">{itmes.product_head}</h1>
-              <p className="text-gray-600/80 font-semibold">
+              <h1 className="text-md font-semibold text-gray-800 mb-2">{itmes.product_head}</h1>
+              <p className="text-sm text-gray-600 mb-3">
                 {/* {itmes.product_para} */}
                 {truncateText(itmes.product_para, 4)}
               </p>
