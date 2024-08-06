@@ -13,7 +13,7 @@ const TopHeading = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="flex items-center justify-between md:justify-center bg-[#40e4ed] p-2">
+        <div className="flex items-center justify-between md:justify-center bg-[#000000] p-2">
           {/* <h1 className="text-2xl text-center font-semibold font-[Bungee]">
             WINGS FASHON
           </h1> */}

@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "images": [
+          "/assets/page-1/polo-product-1-1.jpeg",
+          "/assets/page-1/polo-product-1-2.jpeg",
+          "/assets/page-1/polo-product-1-3.jpeg",
+          "/assets/page-1/polo-product-1-4.jpeg",
+          "/assets/page-1/polo-product-1-5.jpeg",
+          "/assets/page-1/product-(3)(8)-6.jpeg"
+        ],
+    
+        "alt": "Mr",
+        "product_head": "Premium white polo",
+        "product_para": "Premium white polo for men.",
+        "product_old_price": "1499",
+        "product_new_price": "699"
+      } , 
+
+      {
+        "id": 2,
+        "images": [
+          "/assets/page-1/hoodies-product-1-1.jpeg",
+          "/assets/page-1/hoodies-product-1-2.jpeg",
+          "/assets/page-1/hoodies-product-1-3.jpeg",
+          "/assets/page-1/hoodies-product-1-4.jpeg",
+          "/assets/page-1/hoodies-product-1-5.jpeg",
+          "/assets/page-1/product-1(2)(9)-6.jpeg"
+        ],
+        "alt": "Ms",
+        "product_head": "Premium Black Hoodies",
+        "product_para": "Premium Black Hoodies for men.",
+        "product_old_price": "1999",
+        "product_new_price": "949"
+      },
+
+      {
+        "id": 3,
+        "images": [
+          "/assets/page-1/oversized-product-2-1.png",
+          "/assets/page-1/oversized-product-2-2.png",
+          "/assets/page-1/oversized-product-2-3.png",
+          "/assets/page-1/oversized-product-colorTheme-2.png",
+          "/assets/page-1/oversized-chart-product.jpeg"
+        ],
+        "alt": "Honorable",
+        "product_head": "Light Blue Oversized Tshirt",
+        "product_para": "Wings premium oversized tshirt.",
+        "product_old_price": "1899",
+        "product_new_price": "799"
+      },
+      {
+        "id": 4,
+        "images": [
+          "/assets/page-1/rounded-product-1-1.jpeg",
+          "/assets/page-1/rounded-product-1-2.jpeg",
+          "/assets/page-1/rounded-product-1-3.jpeg",
+          "/assets/page-1/rounded-product-1-4.jpeg",
+          "/assets/page-1/rounded-product-1-5.jpeg",
+          "/assets/page-1/product-4-6.jpeg"
+        ],
+        "alt": "Honorable",
+        "product_head": "Round neck black tshirt",
+        "product_para": "Round neck black tshirt for men.",
+        "product_old_price": "999",
+        "product_new_price": "499"
+      }
+
+
+
+
+
+
+      
+
+]

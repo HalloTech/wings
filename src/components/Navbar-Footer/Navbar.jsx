@@ -47,7 +47,7 @@ const Navbar = ({ footerRef }) => {
   return (
     <>
       {/* desktop navbar */}
-      <nav className="flex items-center justify-between bg-yellow-300 py-4">
+      <nav className="flex items-center justify-between bg-white py-4">
         <ul className="md:hidden w-full flex items-center justify-center gap-8">
           {socialMedias.map((item, index) => (
             <Link

@@ -1,29 +1,54 @@
-import InfiniteScroller from "./InifiteScroller";
+//import InfiniteScroller from "./InifiteScroller";
+import { useNavigate } from "react-router-dom";
+import polos from "../../../../json/Home.json";
 
 const PremiumHoodiesSection = () => {
+
+  const navigate = useNavigate();
+
+  const handleUserClick = (polos) => {
+    navigate("/single-hoodies", { state: { hoodiesSingleData: polos } });
+  };
+
+  const truncateText = (text, wordLimit) => {
+    const words = text.split(" ");
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(" ") + "....";
+    }
+    return text;
+  };
+
   return (
-    <>
-      <div className="flex flex-col justify-center items-center">
-        <div
-          className="flex w-full h-3/4 mt-5"
-          // onClick={() => navigate("/shop")}
+    <div  style={{flexGrow : 'inherit'}} >
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4  gap-6 p-6  font-Amiri "  >
+    {polos.map((item, index) => (
+        <div 
+          key={index} 
+          className="bg-grey rounded-lg shadow-md  cursor-pointer hover:shadow-lg transition-shadow duration-300 p-4  flex flex-col"
+          onClick={() => handleUserClick(item)}
         >
           <img
-            src="/assets/wings-orginal/wings-orginal-banners.png"
-            alt="DSC_7062.JPG"
-            className="w-full sm:h-[15rem] object-cover sm:object-fill"
+            src={item.images[0]}
+            alt={item.alt}
+            className="w-full h-74 object-cover"
           />
+          <div className="p-4 flex flex-col justify-between flex-grow">
+            <div>
+              <h2 className="text-md font-semibold text-gray-800 mb-2">{item.product_head}</h2>
+              <p className="text-sm text-gray-600 mb-3">
+                {truncateText(item.product_para, 6)}
+              </p>
+            </div>
+            <div className="flex items-center">
+  <span className="text-green-600 font-semibold mr-1">{item.product_new_price}/-</span>
+  <span className="text-red-600 line-through text-sm">{item.product_old_price}/-</span>
+</div>
+          </div>
         </div>
+      ))}
+    </div>
 
-        <div className="flex flex-col w-full">
-          <span className="text-black text-center my-4 text-2xl font-semibold">
-            Shop by Category- Men
-          </span>
-
-          <InfiniteScroller />
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
 
