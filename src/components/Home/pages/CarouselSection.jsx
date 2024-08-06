@@ -1,5 +1,5 @@
 import { useState } from "react";
-import InifiteScroller from "./InifiteScroller";
+//import InifiteScroller from "./InifiteScroller";
 import { Link } from "react-router-dom";
 
 const CarouselSection = () => {
@@ -138,7 +138,7 @@ const CarouselSection = () => {
           </button>
         </div>
 
-        <InifiteScroller />
+        {/* <InifiteScroller /> */}
       </div>
     </>
   );
