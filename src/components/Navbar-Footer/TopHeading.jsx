@@ -27,10 +27,10 @@ const TopHeading = () => {
 
           <div className="md:hidden flex flex-col justify-center items-center pr-4">
             <VscThreeBars
-              className="text-4xl text-black cursor-pointer"
+              className="text-4xl text-white cursor-pointer"
               onClick={toggleSideNav}
             />
-            <h2>Explore More</h2>
+            <h2 style={{color : 'white'}} >Explore More</h2>
           </div>
         </div>
 

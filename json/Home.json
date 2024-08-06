@@ -14,7 +14,8 @@
         "product_head": "Premium white polo",
         "product_para": "Premium white polo for men.",
         "product_old_price": "1499",
-        "product_new_price": "699"
+        "product_new_price": "699",
+        "href": "/polo"
       } , 
 
       {
@@ -31,7 +32,8 @@
         "product_head": "Premium Black Hoodies",
         "product_para": "Premium Black Hoodies for men.",
         "product_old_price": "1999",
-        "product_new_price": "949"
+        "product_new_price": "949",
+        "href": "/hoodies"
       },
 
       {
@@ -47,7 +49,8 @@
         "product_head": "Light Blue Oversized Tshirt",
         "product_para": "Wings premium oversized tshirt.",
         "product_old_price": "1899",
-        "product_new_price": "799"
+        "product_new_price": "799",
+        "href": "/oversized"
       },
       {
         "id": 4,
@@ -63,7 +66,8 @@
         "product_head": "Round neck black tshirt",
         "product_para": "Round neck black tshirt for men.",
         "product_old_price": "999",
-        "product_new_price": "499"
+        "product_new_price": "499",
+        "href": "/rounded-Tshirts"
       }
 
 

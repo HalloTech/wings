@@ -6,8 +6,8 @@ const PremiumHoodiesSection = () => {
 
   const navigate = useNavigate();
 
-  const handleUserClick = (polos) => {
-    navigate("/single-hoodies", { state: { hoodiesSingleData: polos } });
+  const handleUserClick = (item) => {
+    navigate(item.href);
   };
 
   const truncateText = (text, wordLimit) => {
