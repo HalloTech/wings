@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link, useLocation } from "react-router-dom";
-import { BsInstagram, BsFacebook } from "react-icons/bs";
-import { IoHomeOutline } from "react-icons/io5";
+// import { BsInstagram, BsFacebook } from "react-icons/bs";
+// import { IoHomeOutline } from "react-icons/io5";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -14,25 +14,25 @@ const navigation = [
   { name: "Contact-Us", href: "#" },
 ];
 
-const socialMedias = [
-  {
-    name: "Home",
-    link: "/",
-    icon: <IoHomeOutline />,
-  },
+// const socialMedias = [
+//   {
+//     name: "Home",
+//     link: "/",
+//     icon: <IoHomeOutline />,
+//   },
 
-  {
-    name: "Instagram",
-    link: "https://www.instagram.com/wingsclothing0?igsh=ZnRuMGZrZ2xmajVs",
-    icon: <BsInstagram />,
-  },
+//   {
+//     name: "Instagram",
+//     link: "https://www.instagram.com/wingsclothing0?igsh=ZnRuMGZrZ2xmajVs",
+//     icon: <BsInstagram />,
+//   },
 
-  {
-    name: "Facebook",
-    link: "https://www.facebook.com/profile.php?id=100083149247935&mibextid=ZbWKwL",
-    icon: <BsFacebook />,
-  },
-];
+//   {
+//     name: "Facebook",
+//     link: "https://www.facebook.com/profile.php?id=100083149247935&mibextid=ZbWKwL",
+//     icon: <BsFacebook />,
+//   },
+// ];
 
 const Navbar = ({ footerRef }) => {
   const location = useLocation();
@@ -48,7 +48,7 @@ const Navbar = ({ footerRef }) => {
     <>
       {/* desktop navbar */}
       <nav className="flex items-center justify-between bg-white py-4">
-        <ul className="md:hidden w-full flex items-center justify-center gap-8">
+        {/* <ul className="md:hidden w-full flex items-center justify-center gap-8">
           {socialMedias.map((item, index) => (
             <Link
               key={index}
@@ -66,7 +66,7 @@ const Navbar = ({ footerRef }) => {
               </span>
             </Link>
           ))}
-        </ul>
+        </ul> */}
 
         <div className="w-full hidden md:flex items-center justify-center gap-4">
           {navigation.map((items, index) => (
